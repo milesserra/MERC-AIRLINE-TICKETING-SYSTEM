@@ -141,4 +141,13 @@ public class Passenger extends Person {
         return fare;
     }
 
+    @Override
+    public double applyDiscount(int age, double fare) {
+        double discount = 0;
+        if (age > 59) {
+            discount = fare * .20;
+        }
+        return discount;
+    }
+
 }

@@ -71,6 +71,7 @@ public class Main {
     //</editor-fold>
 
     void checkAvailableSeats() {
+        System.out.println("************ AVAILABLE FLIGHTS: ************\n");
         if (travelType.equals("L")) {
             //<editor-fold defaultstate="collapsed" desc="PRIVATE LOCAL FLIGHTS">
             if (airplaneType.equals("P")) {
@@ -224,6 +225,7 @@ public class Main {
             }
             //</editor-fold>
         }
+        System.out.println("\n********************************************");
         System.out.println();
     }
 
@@ -499,6 +501,7 @@ public class Main {
                     String wantToAvailInsurance;
                     double travelInsurance = 0;
                     double additionalFee = 0;
+                    double subTotalFee = 0;
                     double totalFee = 0;
                     String controlNumber;
                     while (true) {
@@ -527,7 +530,7 @@ public class Main {
                                     tax = passenger.applyTravelTax(airplaneType);
                                     baggageFee = passenger.applyBaggageFee(airplaneType);
                                     fare = passenger.computeFare(airplaneType, itinerary);
-                                    discount = T.applyDiscount(age, fare);
+                                    discount = passenger.applyDiscount(age, fare);
                                     System.out.println("Fare: " + fare);
                                     System.out.println("Tax: " + tax);
                                     System.out.println("Baggage fee: " + baggageFee);
@@ -548,19 +551,21 @@ public class Main {
                                             b--;
                                         }
                                     }
-                                    additionalFee = T.computeTransactionFee(airplaneType);
-                                    totalFee += T.computeTotal(tax, fare, baggageFee, travelInsurance, additionalFee, discount);
+
+                                    subTotalFee += T.computeTotal(tax, fare, baggageFee, travelInsurance, discount);
                                     //System.out.print(totalFare);
                                     //totalFare = T.computeTotal(A.getAirplaneType(), totalFare, age, totalFare, totalFare);
                                     //to save: name, age, itinerary, airplane type, fare, tax, baggage fee, discount, travel insurance, total fare, control number
                                     M.addPassenger(name);
                                     T.recordTransaction(name, age, itinerary, airplaneType,
                                             fare, tax, baggageFee, discount, travelInsurance,
-                                            totalFee, controlNumber);
+                                            subTotalFee, controlNumber);
                                     // To do: apply tax, compute fare, compute baggage fee and ask travel insurance
                                     //destination.assignPassenger(passenger.getName(), airlineType.getFlightType(), destination.getDestination());
                                 }
                             }
+                            additionalFee = T.computeTransactionFee(airplaneType);
+                            totalFee = subTotalFee + additionalFee;
                             System.out.println("Control number: " + controlNumber);
                             System.out.println("Travel insurance (" + airplaneType + "): " + travelInsurance);
                             System.out.println("Additional transaction fee: " + additionalFee);
@@ -568,7 +573,6 @@ public class Main {
                             System.out.println("\nREMINDER: Show the control number on cashier and pay, STRICTLY NO REFUND.\n");
                             break;
                         }
-
                     }
                 }
                 //</editor-fold>

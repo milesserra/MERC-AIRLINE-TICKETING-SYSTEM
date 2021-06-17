@@ -100,101 +100,7 @@ public class Transaction {
             }
         }
     }
-
-    /*public double computeFare(String airplaneType, String itinerary) {
-    double fare = 0;
-    switch (airplaneType) {
-    case "P" -> {
-    switch (itinerary) {
-    case "MNL-BSO" ->
-    fare = 8000;
-    case "BSO-MNL" ->
-    fare = 9800;
-    case "MNL-PPS" ->
-    fare = 9100;
-    case "PPS-MNL" ->
-    fare = 9850;
-    case "MNL-KOR" ->
-    fare = 27450;
-    case "KOR-MNL" ->
-    fare = 30890;
-    case "MNL-JPN" ->
-    fare = 40450;
-    case "JPN-MNL" ->
-    fare = 43855;
-    case "MNL-VNM" ->
-    fare = 8505;
-    case "VNM-MNL" ->
-    fare = 14300;
-    }
-    }
-    case "B" -> {
-    switch (itinerary) {
-    case "MNL-BSO" ->
-    fare = 12500;
-    case "BSO-MNL" ->
-    fare = 12950;
-    case "MNL-PPS" ->
-    fare = 10500;
-    case "PPS-MNL" ->
-    fare = 10975;
-    case "MNL-KOR" ->
-    fare = 37390;
-    case "KOR-MNL" ->
-    fare = 39650;
-    case "MNL-JPN" ->
-    fare = 45355;
-    case "JPN-MNL" ->
-    fare = 49780;
-    case "MNL-VNM" ->
-    fare = 12345;
-    case "VNM-MNL" ->
-    fare = 16320;
-    }
-    }
-    case "R" -> {
-    switch (itinerary) {
-    case "MNL-BSO" ->
-    fare = 3500;
-    case "BSO-MNL" ->
-    fare = 3900;
-    case "MNL-PPS" ->
-    fare = 3200;
-    case "PPS-MNL" ->
-    fare = 3575;
-    case "MNL-KOR" ->
-    fare = 12055;
-    case "KOR-MNL" ->
-    fare = 13100;
-    case "MNL-JPN" ->
-    fare = 27800;
-    case "JPN-MNL" ->
-    fare = 29400;
-    case "MNL-VNM" ->
-    fare = 3200;
-    case "VNM-MNL" ->
-    fare = 4600;
-    }
-    }
-    }
-    return fare;
-    }*/
-
-    public double availTravelInsurance(String airplaneType) {
-        double travelInsurance = 0;
-        travelInsurance = switch (airplaneType) {
-            case "P" ->
-                4500;
-            case "B" ->
-                6500;
-            case "R" ->
-                950;
-            default ->
-                0;
-        };
-        return travelInsurance;
-    }
-
+    
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMdd");
     LocalDateTime now = LocalDateTime.now();
     ArrayList<String> transaction = new ArrayList<>();
@@ -240,17 +146,19 @@ public class Transaction {
         return controlNumber;
     }
 
-    public double applyDiscount(int age, double fare) {
-        double discount = 0;
-        if (age > 59) {
-            discount = fare * .20;
-        }
-        return discount;
-    }
-
-    public double computeTotal(double tax, double fare, double baggageFee, double travelInsurance, double transactionFee, double discount) {
-        double total = (tax + fare + baggageFee + travelInsurance + transactionFee) - discount;
-        return total;
+    public double availTravelInsurance(String airplaneType) {
+        double travelInsurance = 0;
+        travelInsurance = switch (airplaneType) {
+            case "P" ->
+                4500;
+            case "B" ->
+                6500;
+            case "R" ->
+                950;
+            default ->
+                0;
+        };
+        return travelInsurance;
     }
 
     public double computeTransactionFee(String airplaneType) {
@@ -267,5 +175,10 @@ public class Transaction {
                 break;
         }
         return tf;
+    }
+
+    public double computeTotal(double tax, double fare, double baggageFee, double travelInsurance, double discount) {
+        double total = (tax + fare + baggageFee + travelInsurance) - discount;
+        return total;
     }
 }
