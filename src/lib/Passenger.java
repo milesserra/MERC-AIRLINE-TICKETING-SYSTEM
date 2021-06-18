@@ -25,15 +25,12 @@ public class Passenger extends Person {
             travelTax = 0;
         } else {
             switch (airplaneType) {
-                case "P":
+                case "P" ->
                     this.travelTax = 4260;
-                    break;
-                case "B":
+                case "B" ->
                     this.travelTax = 5700;
-                    break;
-                case "R":
+                case "R" ->
                     this.travelTax = 2500;
-                    break;
             }
         }
         return travelTax;
@@ -46,15 +43,12 @@ public class Passenger extends Person {
             baggageFee = 0;
         } else {
             switch (airplaneType) {
-                case "P":
+                case "P" ->
                     this.baggageFee = 1250;
-                    break;
-                case "B":
+                case "B" ->
                     this.baggageFee = 2850;
-                    break;
-                case "R":
+                case "R" ->
                     this.baggageFee = 950;
-                    break;
             }
         }
         return baggageFee;

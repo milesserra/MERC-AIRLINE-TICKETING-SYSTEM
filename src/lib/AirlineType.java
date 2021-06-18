@@ -21,7 +21,7 @@ public class AirlineType {
     public void setAirplaneType(String airplaneType) {
         this.airplaneType = airplaneType;
     }
-    
+
     public String getTravelType() {
         return travelType;
     }

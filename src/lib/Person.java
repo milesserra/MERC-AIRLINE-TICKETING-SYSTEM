@@ -42,5 +42,5 @@ public abstract class Person {
     abstract public double computeFare(String a, String i);
 
     abstract public double applyDiscount(int age, double fare);
-    
+
 }

@@ -313,7 +313,7 @@ public class Main {
 
     void addPassenger(String name) {
         switch (airplaneType) {
-            case "P":
+            case "P" -> {
                 switch (itinerary) {
                     case "MNL-BSO" ->
                         PRIVATE_MNL_BSO.add(name);
@@ -336,8 +336,8 @@ public class Main {
                     case "VNM-MNL" ->
                         PRIVATE_VNM_MNL.add(name);
                 }
-                break;
-            case "B":
+            }
+            case "B" -> {
                 switch (itinerary) {
                     case "MNL-BSO" ->
                         BUSINESS_MNL_BSO.add(name);
@@ -360,8 +360,8 @@ public class Main {
                     case "VNM-MNL" ->
                         BUSINESS_VNM_MNL.add(name);
                 }
-                break;
-            case "R":
+            }
+            case "R" -> {
                 switch (itinerary) {
                     case "MNL-BSO" ->
                         REGULAR_MNL_BSO.add(name);
@@ -384,7 +384,7 @@ public class Main {
                     case "VNM-MNL" ->
                         REGULAR_VNM_MNL.add(name);
                 }
-                break;
+            }
         }
     }
 
@@ -481,7 +481,7 @@ public class Main {
             System.out.println();
 
             switch (todo) {
-                case 1: //<editor-fold defaultstate="collapsed" desc="CASE 1">
+                case 1 -> //<editor-fold defaultstate="collapsed" desc="BOOK FLIGHT">
                 {
                     M.viewAvailabilityOfFlights();
 
@@ -500,9 +500,9 @@ public class Main {
                     double discount;
                     String wantToAvailInsurance;
                     double travelInsurance = 0;
-                    double additionalFee = 0;
+                    double additionalFee;
                     double subTotalFee = 0;
-                    double totalFee = 0;
+                    double totalFee;
                     String controlNumber;
                     while (true) {
                         System.out.print("Number of passenger/s \n: ");
@@ -535,20 +535,25 @@ public class Main {
                                     System.out.println("Tax: " + tax);
                                     System.out.println("Baggage fee: " + baggageFee);
                                     System.out.println("Discount: " + discount + "\n");
+                                    OUTER:
                                     for (int b = 0; b < 1 && a == numberOfPassenger; b++) {
                                         System.out.println("Do you want to avail travel insurance? Y/N");
                                         System.out.print(": ");
                                         wantToAvailInsurance = sc.nextLine().toUpperCase();
                                         System.out.println();
-                                        if (wantToAvailInsurance.equals("Y")) {
-                                            travelInsurance = T.availTravelInsurance(airplaneType);
-                                            break;
-                                        } else if (wantToAvailInsurance.equals("N")) {
-                                            // Do nothing
-                                            break;
-                                        } else {
-                                            System.out.println("Invalid choice, try again.\n");
-                                            b--;
+                                        switch (wantToAvailInsurance) {
+                                            case "Y" -> {
+                                                travelInsurance = T.availTravelInsurance(airplaneType);
+                                                break OUTER;
+                                            }
+                                            case "N" -> {
+                                                // Do nothing
+                                                break OUTER;
+                                            }
+                                            default -> {
+                                                System.out.println("Invalid choice, try again.\n");
+                                                b--;
+                                            }
                                         }
                                     }
 
@@ -576,14 +581,13 @@ public class Main {
                     }
                 }
                 //</editor-fold>
-                break;
-                case 2: //<editor-fold defaultstate="collapsed" desc="CASE 2">
+                case 2 -> //<editor-fold defaultstate="collapsed" desc="VIEW AVAILABILITY OF FLIGHTS">
                 {
                     M.viewAvailabilityOfFlights();
                 }
                 //</editor-fold>
-                break;
-                case 3: {
+                case 3 -> //<editor-fold defaultstate="collapsed" desc="EXIT">
+                {
                     System.out.print("Are you sure do you want to exit? Y/N");
                     System.out.println(": ");
                     //sc.nextLine();
@@ -594,9 +598,9 @@ public class Main {
                         todo = 0;
                         System.out.println();
                     }
-                    break;
                 }
-                default:
+//</editor-fold>
+                default ->
                     System.out.println("INVALID CHOICE!\n");
             }
         }

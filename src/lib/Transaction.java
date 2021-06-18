@@ -100,7 +100,7 @@ public class Transaction {
             }
         }
     }
-    
+
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMdd");
     LocalDateTime now = LocalDateTime.now();
     ArrayList<String> transaction = new ArrayList<>();
@@ -147,7 +147,7 @@ public class Transaction {
     }
 
     public double availTravelInsurance(String airplaneType) {
-        double travelInsurance = 0;
+        double travelInsurance;
         travelInsurance = switch (airplaneType) {
             case "P" ->
                 4500;
@@ -164,15 +164,12 @@ public class Transaction {
     public double computeTransactionFee(String airplaneType) {
         double tf = 0;
         switch (airplaneType) {
-            case "P":
+            case "P" ->
                 tf = 500.0;
-                break;
-            case "B":
+            case "B" ->
                 tf = 500.0;
-                break;
-            case "R":
+            case "R" ->
                 tf = 255.0;
-                break;
         }
         return tf;
     }
