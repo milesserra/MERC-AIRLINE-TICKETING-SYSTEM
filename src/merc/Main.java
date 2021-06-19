@@ -79,19 +79,23 @@ public class Main {
                 System.out.println("Manila (MNL) - Basco (BSO)");
                 System.out.println(
                         "Available seats: "
-                        + (20 - 6 - PRIVATE_MNL_BSO.size()));
+                        + (20 - 6 - PRIVATE_MNL_BSO.size())
+                        + "\nFare per person: 8,000.0\n");
                 System.out.println("Basco (BSO) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (20 - 6 - PRIVATE_BSO_MNL.size()));
+                        + (20 - 6 - PRIVATE_BSO_MNL.size())
+                        + "\nFare per person: 9,800.0\n");
                 System.out.println("Manila (MNL) - Puerto Princesa (PPS)");
                 System.out.println(
                         "Available seats: "
-                        + (20 - 6 - PRIVATE_MNL_PPS.size()));
+                        + (20 - 6 - PRIVATE_MNL_PPS.size())
+                        + "\nFare per person: 9,100.0\n");
                 System.out.println("Puerto Princesa (PPS) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (20 - 6 - PRIVATE_PPS_MNL.size()));
+                        + (20 - 6 - PRIVATE_PPS_MNL.size())
+                        + "\nFare per person: 9,850.0\n");
             }
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="BUSINESS LOCAL FLIGHTS">
@@ -100,19 +104,23 @@ public class Main {
                 System.out.println("Manila (MNL) - Basco (BSO)");
                 System.out.println(
                         "Available seats: "
-                        + (30 - 7 - BUSINESS_MNL_BSO.size()));
+                        + (30 - 7 - BUSINESS_MNL_BSO.size())
+                        + "\nFare per person: 12,500.0\n");
                 System.out.println("Basco (BSO) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (30 - 7 - BUSINESS_BSO_MNL.size()));
+                        + (30 - 7 - BUSINESS_BSO_MNL.size())
+                        + "\nFare per person: 12,950.0\n");
                 System.out.println("Manila (MNL) - Puerto Princesa (PPS)");
                 System.out.println(
                         "Available seats: "
-                        + (30 - 7 - BUSINESS_MNL_PPS.size()));
+                        + (30 - 7 - BUSINESS_MNL_PPS.size())
+                        + "\nFare per person: 10,500.0\n");
                 System.out.println("Puerto Princesa (PPS) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (30 - 7 - BUSINESS_PPS_MNL.size()));
+                        + (30 - 7 - BUSINESS_PPS_MNL.size())
+                        + "\nFare per person: 10,975.0\n");
             }
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="REGULAR LOCAL FLIGHTS">
@@ -121,19 +129,23 @@ public class Main {
                 System.out.println("Manila (MNL) - Basco (BSO)");
                 System.out.println(
                         "Available seats: "
-                        + (100 - 52 - REGULAR_MNL_BSO.size()));
+                        + (100 - 52 - REGULAR_MNL_BSO.size())
+                        + "\nFare per person: 3,500.0\n");
                 System.out.println("Basco (BSO) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (100 - 52 - REGULAR_BSO_MNL.size()));
+                        + (100 - 52 - REGULAR_BSO_MNL.size())
+                        + "\nFare per person: 3,900.0\n");
                 System.out.println("Manila (MNL) - Puerto Princesa (PPS)");
                 System.out.println(
                         "Available seats: "
-                        + (100 - 52 - REGULAR_MNL_PPS.size()));
+                        + (100 - 52 - REGULAR_MNL_PPS.size())
+                        + "\nFare per person: 3,200.0\n");
                 System.out.println("Puerto Princesa (PPS) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (100 - 52 - REGULAR_PPS_MNL.size()));
+                        + (100 - 52 - REGULAR_PPS_MNL.size())
+                        + "\nFare per person: 3,575.0\n");
             }
             //</editor-fold>
         } else if (travelType.equals("I")) {
@@ -143,27 +155,33 @@ public class Main {
                 System.out.println("Manila (MNL) - South Korea (KOR)");
                 System.out.println(
                         "Available seats: "
-                        + (20 - 6 - PRIVATE_MNL_KOR.size()));
+                        + (20 - 6 - PRIVATE_MNL_KOR.size())
+                        + "\nFare per person: 27,450.0\n");
                 System.out.println("South Korea (KOR) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (20 - 6 - PRIVATE_KOR_MNL.size()));
+                        + (20 - 6 - PRIVATE_KOR_MNL.size())
+                        + "\nFare per person: 30,890.0\n");
                 System.out.println("Manila (MNL) - Japan (JPN)");
                 System.out.println(
                         "Available seats: "
-                        + (20 - 6 - PRIVATE_MNL_JPN.size()));
+                        + (20 - 6 - PRIVATE_MNL_JPN.size())
+                        + "\nFare per person: 40,450.0\n");
                 System.out.println("Japan (JPN) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (20 - 6 - PRIVATE_JPN_MNL.size()));
+                        + (20 - 6 - PRIVATE_JPN_MNL.size())
+                        + "\nFare per person: 43,855.0\n");
                 System.out.println("Manila (MNL) - Vietnam (VNM)");
                 System.out.println(
                         "Available seats: "
-                        + (20 - 6 - PRIVATE_MNL_VNM.size()));
+                        + (20 - 6 - PRIVATE_MNL_VNM.size())
+                        + "\nFare per person: 8,8505.0\n");
                 System.out.println("Vietnam (VNM) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (20 - 6 - PRIVATE_VNM_MNL.size()));
+                        + (20 - 6 - PRIVATE_VNM_MNL.size())
+                        + "\nFare per person: 14,300.0\n");
             }
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="BUSINESS INTERNATIONAL FLIGHTS">
@@ -172,27 +190,33 @@ public class Main {
                 System.out.println("Manila (MNL) - South Korea (KOR)");
                 System.out.println(
                         "Available seats: "
-                        + (30 - 7 - BUSINESS_MNL_KOR.size()));
+                        + (30 - 7 - BUSINESS_MNL_KOR.size())
+                        + "\nFare per person: 37,390.0\n");
                 System.out.println("South Korea (KOR) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (30 - 7 - BUSINESS_KOR_MNL.size()));
+                        + (30 - 7 - BUSINESS_KOR_MNL.size())
+                        + "\nFare per person: 39,650.0\n");
                 System.out.println("Manila (MNL) - Japan (JPN)");
                 System.out.println(
                         "Available seats: "
-                        + (30 - 7 - BUSINESS_MNL_JPN.size()));
+                        + (30 - 7 - BUSINESS_MNL_JPN.size())
+                        + "\nFare per person: 45,355.0\n");
                 System.out.println("Japan (JPN) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (30 - 7 - BUSINESS_JPN_MNL.size()));
+                        + (30 - 7 - BUSINESS_JPN_MNL.size())
+                        + "\nFare per person: 49,780.0\n");
                 System.out.println("Manila (MNL) - Vietnam (VNM)");
                 System.out.println(
                         "Available seats: "
-                        + (30 - 7 - BUSINESS_MNL_VNM.size()));
+                        + (30 - 7 - BUSINESS_MNL_VNM.size())
+                        + "\nFare per person: 12,345.0\n");
                 System.out.println("Vietnam (VNM) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (30 - 7 - BUSINESS_VNM_MNL.size()));
+                        + (30 - 7 - BUSINESS_VNM_MNL.size())
+                        + "\nFare per person: 16,320.0\n");
             }
             //</editor-fold>
             //<editor-fold defaultstate="collapsed" desc="REGULAR INTERNATIONAL FLIGHTS">
@@ -201,31 +225,37 @@ public class Main {
                 System.out.println("Manila (MNL) - South Korea (KOR)");
                 System.out.println(
                         "Available seats: "
-                        + (100 - 52 - REGULAR_MNL_KOR.size()));
+                        + (100 - 52 - REGULAR_MNL_KOR.size())
+                        + "\nFare per person: 12,055.0\n");
                 System.out.println("South Korea (KOR) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (100 - 52 - REGULAR_KOR_MNL.size()));
+                        + (100 - 52 - REGULAR_KOR_MNL.size())
+                        + "\nFare per person: 13,100.0\n");
                 System.out.println("Manila (MNL) - Japan (JPN)");
                 System.out.println(
                         "Available seats: "
-                        + (100 - 52 - REGULAR_MNL_JPN.size()));
+                        + (100 - 52 - REGULAR_MNL_JPN.size())
+                        + "\nFare per person: 27,800.0\n");
                 System.out.println("Japan (JPN) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (100 - 52 - REGULAR_JPN_MNL.size()));
+                        + (100 - 52 - REGULAR_JPN_MNL.size())
+                        + "\nFare per person: 29,400.0\n");
                 System.out.println("Manila (MNL) - Vietnam (VNM)");
                 System.out.println(
                         "Available seats: "
-                        + (100 - 52 - REGULAR_MNL_VNM.size()));
+                        + (100 - 52 - REGULAR_MNL_VNM.size())
+                        + "\nFare per person: 32,00.0\n");
                 System.out.println("Vietnam (VNM) - Manila (MNL)");
                 System.out.println(
                         "Available seats: "
-                        + (100 - 52 - REGULAR_VNM_MNL.size()));
+                        + (100 - 52 - REGULAR_VNM_MNL.size())
+                        + "\nFare per person: 46,00.0\n");
             }
             //</editor-fold>
         }
-        System.out.println("\n********************************************");
+        System.out.println("********************************************");
         System.out.println();
     }
 
